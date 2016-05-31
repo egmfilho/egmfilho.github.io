@@ -1,0 +1,207 @@
+{
+key: "30a4d6604e58e87bd50",
+locale: {
+btn_reload: "Reload",
+tooltip_btn_play: "Play",
+tooltip_btn_pause: "Pause",
+tooltip_btn_stop: "Stop",
+tooltip_btn_next: "Next",
+tooltip_btn_previous: "Previous",
+tooltip_btn_sfwd: "Slow Forward",
+tooltip_btn_ffwd: "Fast Forward",
+tooltip_btn_mute: "",
+tooltip_btn_unmute: "",
+tooltip_btn_menu: "",
+tooltip_btn_settings: "",
+tooltip_btn_lang: "",
+tooltip_btn_fullscreen_on: "Full screen",
+tooltip_btn_fullscreen_off: "Exit full screen",
+tooltip_btn_resize_expand: "Expand",
+tooltip_btn_resize_reduce: "Reduce",
+tooltip_btn_share_facebook: "Facebook",
+tooltip_btn_share_twitter: "Twitter",
+tooltip_btn_share_embed: "Embed",
+tooltip_btn_share_link: "Link",
+splash_error_404_msg: "Oops! This video is no<br>longer available.",
+splash_error_404_sorry: "Sorry",
+splash_error_403_msg: "Oops! You do not have permission<br>to watch this video.",
+splash_error_expired_msg: "Oops! Your session has expired.<br>Click the button to reload the video.",
+splash_error_geoblock_msg: "Oops! This video is not available<br>on your country.",
+splash_error_live_msg: "Oops! Transmission unavailable.",
+splash_error_live_sorry: "Sorry",
+splash_copy_embed: "Embed copied!",
+splash_copy_link: "Link copied!",
+splash_copy_msg1: "Press",
+splash_copy_msg2: "Ctrl %2b V",
+splash_copy_msg3: "to paste.",
+flash_version_error_msg: "You need the latest version of Adobe Flash Player to visualize this video.",
+advertising_counter: "ADVERTISING",
+output_quality_text: "QUALITY",
+caption_header_text: "CAPTIONS",
+en_US: "English",
+en_UK: "English (England)",
+pt_BR: "Portuguese",
+ja_JP: "Japanese",
+es_ES: "Spanish",
+it_IT: "Italian",
+pt_PT: "Portuguese ( Portugal )",
+disable_caption: "Disable",
+play: "Play",
+email: "email",
+name: "name",
+phone: "phone",
+ad_message: "Advertising ({COUNTDOWN})",
+ad_click: "Click here for more info",
+ad_skip_message: "Skip ad »",
+ad_skip_countdown: "Skip in {COUNTDOWN}",
+lead_submit: "Submit",
+lead_successful: "Thank you!",
+lead_error: "An error has occurred; please try again.",
+lead_msg_preroll: "Enter your {DATA} to watch the video:",
+lead_msg_postroll: "Enter your {DATA} to receive our news:",
+lead_empty: "Type your {DATA}.",
+lead_email_placeholder: "YOUR EMAIL",
+lead_email_invalid: "Invalid email address format.",
+lead_phone_placeholder: "E.G. (212) 555-1234",
+lead_phone_invalid: "Invalid phone number format.",
+lead_name_placeholder: "YOUR NAME",
+high_quality: "High definition",
+resume_hint: "You have watched part of this video before. What do you want to do?",
+resume_from_start: "Watch from the beginning",
+resume_from_start_mini: "Repeat",
+resume_from_seek: "Resume video",
+resume_from_seek_mini: "Continue",
+_18_age_message: "Enter your birthdate to watch this video:",
+_18_age_message_mini: "Enter your birthdate:",
+_18_age_confirm: "You must be at least 18 years old to watch this video.",
+_18_age_confirm_mini: "Are you 18 or over?",
+_18_age_yes: "I am 18 or over",
+_18_age_yes_mini: "Yes",
+_18_age_no: "I am under 18",
+_18_age_no_mini: "No",
+age_not_permited: "You are not allowed to watch this video.",
+age_placeholder: "MM/DD/YYYY",
+password_text: "Enter the password to view this video",
+password_text_mini: "Enter the password",
+share_video: "Share video",
+share_url_video: "Click on the URL to copy to clipboard",
+share_icon_click: "or click on the social icon to share",
+share_copy_embed: "Copy embed",
+tooltip_btn_cast: "Play on TV",
+tooltip_btn_live: "LIVE",
+live: "live",
+cancel: "Cancel",
+share_screen: "Share the Video~Click on the URL to copy to clipboard~Click on the code below to copy to clipboard"
+},
+clip: {
+scaling: "fit",
+autoPlay: true,
+provider: "rtmp",
+pseudoSeek: true,
+urlResolvers: [
+"brselect"
+],
+bitrates: [
+{
+url: "mp4:account/1716/1/2016-04-27/video/b5775e7d612a2cea6b18c0f3cbaa5515/OAB_2_Fase_Tribut_rio_-_Tarde_-_ITBI_I_-_Pedro_Barretto_-_22.04.2016_-_B2_1_240p.mp4",
+bitrate: 296960,
+label: "240p",
+isDefault: false,
+hd: false
+},
+{
+url: "mp4:account/1716/1/2016-04-27/video/7f940def7565ada02e9553d8d915450a/OAB_2_Fase_Tribut_rio_-_Tarde_-_ITBI_I_-_Pedro_Barretto_-_22.04.2016_-_B2_1_360p.mp4",
+bitrate: 483328,
+label: "360p",
+isDefault: true,
+hd: false
+},
+{
+url: "mp4:account/1716/1/2016-04-27/video/c8a0ba35e9043716506e91747bc8182c/OAB_2_Fase_Tribut_rio_-_Tarde_-_ITBI_I_-_Pedro_Barretto_-_22.04.2016_-_B2_1_480p.mp4",
+bitrate: 660480,
+label: "480p",
+isDefault: false,
+hd: false
+}
+],
+pageUrl: ""
+},
+play: {
+width: 90,
+height: 64,
+backgroundColor: 0,
+backgroundAlpha: 0.8,
+alpha: 1,
+bufferColor: "0x72be44",
+themeColor: "0x72be44",
+pageUrl: ""
+},
+canvas: {
+backgroundGradient: "none",
+backgroundColor: "#000000"
+},
+plugins: {
+menu: {
+bottom: 48,
+menuItem: {
+color: "#ffffff",
+fontColor: "#ffffff",
+height: 30
+},
+overColor: "#ffffff"
+},
+controls: {
+zIndex: 47,
+autoHide: true,
+wideScreen: false,
+volumeSliderColor: "#666666",
+bufferColor: "#4e4e4e",
+bufferGradient: "none",
+sliderColor: "#222222",
+sliderBorder: 0,
+scrubberHeightRatio: 0.4,
+scrubberBarHeightRatio: 0.4,
+scrubberEnabled: true,
+buttonOverColor: "#ffffff",
+volumeColor: "rgb(114,190,68)",
+progressColor: "rgb(114,190,68)"
+},
+brselect: {
+hdButton: false,
+menu: "output_quality_text",
+themeColor: "rgba(114,190,68,0.8)"
+},
+lighttpd: {
+queryString: "?ec_seek=${start}",
+pseudoSeek: true
+},
+thumbnail: {
+loadAnimationColor: "rgba(114,190,68,1)",
+width: "100%",
+height: "100%",
+zIndex: 46,
+thumbnailList: [
+{
+url: "http://pvbps-sambavideos.akamaized.net/account/1716/1/2016-04-27/thumbnail/86023b2ca54f82a0956909617da41717/OAB_2_Fase_Tribut_rio_-_Tarde_-_ITBI_I_-_Pedro_Barretto_-_22.04.2016_-_B2_1_853x480.jpg",
+width: 852,
+height: 480
+},
+{
+url: "http://pvbps-sambavideos.akamaized.net/account/1716/1/2016-04-27/thumbnail/db4f7bb3986af5f000fea9db4df81706/OAB_2_Fase_Tribut_rio_-_Tarde_-_ITBI_I_-_Pedro_Barretto_-_22.04.2016_-_B2_1_427x240.jpg",
+width: 426,
+height: 240
+},
+{
+url: "http://pvbps-sambavideos.akamaized.net/account/1716/1/2016-04-27/thumbnail/82e67c95ccfeab61bc3bb2b51f32de69/OAB_2_Fase_Tribut_rio_-_Tarde_-_ITBI_I_-_Pedro_Barretto_-_22.04.2016_-_B2_1_213x120.jpg",
+width: 212,
+height: 120
+}
+]
+},
+rtmp: {
+netConnectionUrl: "rtmpe://rvbp.sambavideos.sambatech.com/"
+}
+},
+showErrors: false,
+debug: true
+}
