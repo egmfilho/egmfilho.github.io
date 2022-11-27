@@ -101,9 +101,11 @@
 		var qst2 = document.getElementById("qst2").value;
 		var av2 = document.getElementById("av2").value;
 		
-		var result = ((av1 * .6) + (qst1 * .4) + (av2 * .6) + (qst2 * .4)) / 2;
+		var media1 = (av1 * .6) + (qst1 * .4);
+		var media2 = (av2 * .6) + (qst2 * .4);
+		var result = (media1 + media2) / 2;
 		
-		alert("Média final: " + result);
+		alert("AV1: " + media1 + "\nAV2: " + media2 + "\nMédia final: " + result);
 	}
 </script>
 </html>
