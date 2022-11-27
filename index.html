@@ -1,85 +1,104 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset='utf-8'>
-		<meta http-equiv="X-UA-Compatible" content="chrome=1">
-		<meta name="description" content="Página de egmfilho - Calculador dos Desesperados">
+<head>
+	<meta charset='utf-8'>
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<meta name="description" content="Página de egmfilho - Calculador dos Desesperados">
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+	
+	<title>Calculadora dos Desesperados - MedTerê</title>
+</head>
 
-		<link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-		<title>Calculador dos Desesperados</title>
-	</head>
-
-	<body>
-
-		<!-- HEADER -->
-		<div id="header_wrap" class="outer">
-				<header class="inner">
-					<!-- <a id="forkme_banner" href="https://github.com/egmfilho">View on GitHub</a> -->
-
-					<h1 id="project_title">Calculador dos Desesperados (Beta)</h1>
-
-				</header>
-		</div>
-
-		<!-- MAIN CONTENT -->
-		<div id="main_content_wrap" class="outer">
-			<section id="main_content" class="inner">
-				<h3>Insira suas notas a seguir</h3>
-				<p>Esta ferramenta foi feita em 15 minutos, portanto ainda está longe de estar bonita ou 100% finalizada, porém já funciona para os alunos desesperados.</p>
-			</section>
-
-			<div class="content" style="width: 50%; margin: auto;">
-				<table>
-					<tr>
-						<td><label for="#av1">AV1</label></td>
-						<td><input type="number" id="av1"></td>
-						<td><p>Peso 60%</p></td>
-					</tr>
-					<tr>
-						<td><label for="#qst1">QSTIONE1</label></td>
-						<td><input type="number" id="qst1"></td>
-						<td><p>Peso 40%</p></td>
-					</tr>
-				</table>
-				<table>
-					<tr>
-						<td><label for="#av2">AV2</label></td>
-						<td><input type="number" id="av2"></td>
-						<td><p>Peso 60%</p></td>
-					</tr>
-					<tr>
-						<td><label for="#qst2">QSTIONE2</label></td>
-						<td><input type="number" id="qst2"></td>
-						<td><p>Peso 40%</p></td>
-					</tr>
-				</table>
-				<button id="btnCalcular" onclick="Calculate()">Calcular</button>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container-fluid">
+			<span class="navbar-brand">Calculadora dos Desesperados <span class="badge bg-success">BETA</span></span>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarText">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<!-- <li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="https://egmfilho.github.io/">Home</a>
+					</li> -->
+					<li class="nav-item">
+						<a class="nav-link" target="_blank" href="https://portal.unifeso.edu.br/FrameHTML/web/app/edu/PortalEducacional/login/">Portal do Aluno</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" target="_blank href="https://www.unifeso.edu.br/aluno.php#VIRTUAL">Ambiente Virtual</a>
+					</li>
+				</ul>
+				<span class="navbar-text">
+					MedTerê - 
+					<a class="link-light" target="_blank" href="http://instagram.com/egmfilho">@egmfilho</a>
+				</span>
 			</div>
-			<br>
-			<br>
-
-
-		<!-- FOOTER  -->
-		<div id="footer_wrap" class="outer">
-			<footer class="inner">
-				<p>Feito por <a target="_blank" href="http://instagram.com/egmfilho">@egmfilho</a> - 2022</p>
-			</footer>
 		</div>
+	</nav>
+	
+	<!-- MAIN CONTENT -->
+	<div class="container" style="margin-top: 64px;">	
+		<div class="row">
+			<div class="col-12 col-sm-2 col-md-2 col-lg-3 col-xxl-4"></div>
+			<div class="hidden-xs col-sm-12 col-md-8 col-lg-6 col-xxl-4 shadow p-3 mb-5 bg-body rounded">
+				<h3>Insira suas notas a seguir</h3>
+				<p class="text-secondary fw-light">A ferramenta será melhorada quando eu tiver tempo (e vontade), no entando ela já funciona para os alunos desesperados poderem calcular suas médias.</p>
+				<table class="table table-striped">
+					<tr>
+						<td class="text-end align-middle"><label for="#av1">AV1</label></td>
+						<td class="align-middle"><input class="form-control" type="number" id="av1"></td>
+						<td class="align-middle"><p>Peso 60%</p></td>
+					</tr>
+					<tr>
+						<td class="text-end align-middle"><label for="#qst1">QSTIONE1</label></td>
+						<td class="align-middle"><input class="form-control" type="number" id="qst1"></td>
+						<td class="align-middle"><p>Peso 40%</p></td>
+					</tr>
+				</table>
+				<table class="table table-striped">
+					<tr>
+						<td class="text-end"><label for="#av2">AV2</label></td>
+						<td><input class="form-control" type="number" id="av2"></td>
+						<td><p>Peso 60%</p></td>
+					</tr>
+					<tr>
+						<td class="text-end"><label for="#qst2">QSTIONE2</label></td>
+						<td><input class="form-control" type="number" id="qst2"></td>
+						<td><p>Peso 40%</p></td>
+					</tr>
+				</table>
+				<div class="d-grid gap-2 mx-auto">
+					<button id="btnCalcular" class="btn btn-success" onclick="Calculate()">Calcular</button>
+				</div>
+			</div>
+			<div class="col-12 col-sm-2 col-md-2 col-lg-3 col-xxl-4"></div>
+		</div>
+	</div>
+	
+	<!-- FOOTER  -->
+	<nav class="navbar fixed-bottom navbar-dark bg-dark">
+		<div class="container-fluid text-center">
+			<span class="navbar-brand fs-6">Feito por <a class="link-light" target="_blank" href="http://instagram.com/egmfilho">@egmfilho</a> - 2022</span>
+		</div>
+	</nav>
+	
+</body>
 
-	</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 
-	<script>
-		function Calculate() {
-			var av1 = document.getElementById("av1").value;
-			var qst1 = document.getElementById("qst1").value;
-			var qst2 = document.getElementById("qst2").value;
-			var av2 = document.getElementById("av2").value;
-
-			var result = ((av1 * .6) + (qst1 * .4) + (av2 * .6) + (qst2 * .4)) / 2;
-
-			alert("Média final: " + result);
-		}
-	</script>
+<script>
+	function Calculate() {
+		var av1 = document.getElementById("av1").value;
+		var qst1 = document.getElementById("qst1").value;
+		var qst2 = document.getElementById("qst2").value;
+		var av2 = document.getElementById("av2").value;
+		
+		var result = ((av1 * .6) + (qst1 * .4) + (av2 * .6) + (qst2 * .4)) / 2;
+		
+		alert("Média final: " + result);
+	}
+</script>
 </html>
