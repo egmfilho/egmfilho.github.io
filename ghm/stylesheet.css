@@ -1,3 +1,7 @@
+html {
+	min-height: 100%;
+}
+
 @font-face {
 	font-family: title-font;
 	src: url(./fonts/Courgette-Regular.ttf);
@@ -9,13 +13,14 @@ h1 {
 }
 
 body {
-	background-image: url('./img/greece2.png');
+	background-image: url('./img/background.png');
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 .bg-body {
 	/* --bs-bg-opacity: 0; */
+	background-color: #ffffffd6 !important;
 	z-index: 2;
 }
 
