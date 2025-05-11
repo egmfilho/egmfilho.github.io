@@ -27,7 +27,7 @@
 						<a class="nav-link active" aria-current="page" href="https://egmfilho.github.io/">Home</a>
 					</li> -->
 					<li class="nav-item">
-						<a class="nav-link" target="_blank" href="https://portal.unifeso.edu.br/FrameHTML/web/app/edu/PortalEducacional/login/">Portal do Aluno</a>
+						<a class="nav-link" target="_blank" href="https://portalint.unifeso.edu.br/FrameHTML/web/app/edu/PortalEducacional/login/">Portal do Aluno</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" target="_blank" href="https://unifeso.instructure.com/login/canvas">Canvas</a>
@@ -44,8 +44,8 @@
 	<!-- MAIN CONTENT -->
 	<div class="container" style="margin-top: 32px; margin-bottom: 48px;">	
 		<div class="row">
-			<div class="col-12 col-sm-2 col-md-2 col-lg-3 col-xxl-4"></div>			
-			<div class="hidden-xs col-sm-12 col-md-8 col-lg-6 col-xxl-4 shadow p-3 mb-5 bg-body rounded">				
+			<div class="col-12 col-sm-2 col-md-2 col-lg-3"></div>			
+			<div class="hidden-xs col-sm-12 col-md-8 col-lg-6 shadow p-3 mb-5 bg-body rounded">				
 				<h3>Insira suas notas a seguir</h3>
 				<p class="text-secondary fw-light">A ferramenta será melhorada quando eu tiver tempo (e vontade), no entando ela já funciona para os alunos desesperados poderem calcular suas médias.</p>
 				
@@ -53,8 +53,9 @@
 					<!-- <h4>Selecione a disciplina</h4> -->
 					<select id="tipo" class="form-select form-select-lg" onchange="onDisciplinaChange(this)">
 						<option selected disabled>Selecione a disciplina</option>
-						<option value="1">Tutoria</option>
-						<option value="2">Outras disciplinas</option>
+						<option value="1">CIS (Tutoria - PBL)</option>
+						<option value="2">CIS (TBL)</option>
+						<option value="3">Outras disciplinas</option>
 					</select>
 				</div>
 				
@@ -107,6 +108,90 @@
 						<button id="btnCalcular" class="btn btn-success" onclick="Calculate()">Calcular</button>
 					</div>
 				</div>
+
+				<div id="TBL" style="display: none">
+					<div class="alert alert-warning text-center">
+						<p class="h3">Atenção!</p>As notas dos TGPs e TCAs devem ser separadas por <b>" ; "</b> (ponto e vírgula)
+						<br>Ex. 7; 9; 5; 6; 10
+					</div>
+					<div class="card mb-3">
+						<div class="card-body">
+							<h5 class="card-title text-center">AV1</h5>
+							<table class="table table-striped">
+								<tr>
+									<td class="text-end align-middle"><label for="#app1">App Caso Clínico</label></td>
+									<td class="align-middle"><input class="form-control" type="number" id="app1"></td>
+									<td class="align-middle"><p>Peso 10%</p></td>
+								</tr>
+								<tr>
+									<td class="text-end align-middle"><label for="#TGPs1">TGPs</label></td>
+									<td class="align-middle">
+										<div class="input-group">
+											<input class="form-control" type="text" id="TGPs1" onchange="UpdateMediaTGP(1)">
+											<span class="input-group-text">=&nbsp;<span id="mediaTGP1">0</span></span>
+										</div>
+									</td>
+									<td class="align-middle"><p>Peso 10%</p></td>
+								</tr>								
+								<tr>
+									<td class="text-end align-middle"><label for="#TCAs1">TCAs</label></td>
+									<td class="align-middle">
+										<div class="input-group">
+											<input class="form-control" type="text" id="TCAs1" onchange="UpdateMediaTCA(1)">
+											<span class="input-group-text">=&nbsp;<span id="mediaTCA1">0</span></span>
+										</div>
+									</td>
+									<td class="align-middle"><p>Peso 30%</p></td>
+								</tr>
+								<tr>
+									<td class="text-end align-middle"><label for="#qst1">QSTIONE1</label></td>
+									<td class="align-middle"><input class="form-control" type="number" id="qst1"></td>
+									<td class="align-middle"><p>Peso 50%</p></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="card mb-3">
+						<div class="card-body">
+							<h5 class="card-title text-center">AV2</h5>
+							<table class="table table-striped">
+								<tr>
+									<td class="text-end align-middle"><label for="#app2">App Caso Clínico</label></td>
+									<td class="align-middle"><input class="form-control" type="number" id="app2"></td>
+									<td class="align-middle"><p>Peso 10%</p></td>
+								</tr>
+								<tr>
+									<td class="text-end align-middle"><label for="#TGPs2">TGPs</label></td>
+									<td class="align-middle">
+										<div class="input-group">
+											<input class="form-control" type="text" id="TGPs2" onchange="UpdateMediaTGP(2)">
+											<span class="input-group-text">=&nbsp;<span id="mediaTGP2">0</span></span>
+										</div>
+									</td>
+									<td class="align-middle"><p>Peso 10%</p></td>
+								</tr>								
+								<tr>
+									<td class="text-end align-middle"><label for="#TCAs2">TCAs</label></td>
+									<td class="align-middle">
+										<div class="input-group">
+											<input class="form-control" type="text" id="TCAs2" onchange="UpdateMediaTCA(2)">
+											<span class="input-group-text">=&nbsp;<span id="mediaTCA2">0</span></span>
+										</div>
+									</td>
+									<td class="align-middle"><p>Peso 30%</p></td>
+								</tr>
+								<tr>
+									<td class="text-end align-middle"><label for="#qst1">QSTIONE2</label></td>
+									<td class="align-middle"><input class="form-control" type="number" id="qst2"></td>
+									<td class="align-middle"><p>Peso 50%</p></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+					<div class="d-grid gap-2 mx-auto">
+						<button id="btnCalcular" class="btn btn-success" onclick="Calculate()">Calcular</button>
+					</div>
+				</div>
 				
 				<div id="outras-disciplinas" style="display: none">
 					<div class="card mb-3">
@@ -148,7 +233,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-12 col-sm-2 col-md-2 col-lg-3 col-xxl-4"></div>
+			<div class="col-12 col-sm-2 col-md-2 col-lg-3"></div>
 		</div>
 	</div>
 	
@@ -173,9 +258,9 @@
 	<nav class="navbar fixed-bottom navbar-dark bg-dark">
 		<div class="container-fluid text-center">
 			<span class="navbar-brand fs-6">
-				Calculadora dos Desesperados <span class="badge bg-success">BETA</span> 
+				Calculadora dos Desesperados <span class="badge bg-success">1.2</span> 
 			</span>
-			<span class="text-light">Feito por <a class="link-light" target="_blank" href="http://instagram.com/egmfilho">Eduardo G. Miranda Filho</a> - 2023.1</span>
+			<span class="text-light">Ultima atualização: 05/2025 &nbsp;|&nbsp; Feito por <a class="link-light" target="_blank" href="http://instagram.com/egmfilho">Eduardo G. Miranda Filho</a></span>
 		</div>
 	</nav>
 	

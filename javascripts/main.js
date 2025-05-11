@@ -14,10 +14,17 @@ function onDisciplinaChange(elem) {
 	switch (_disciplina) {
 		case 1:
 			document.getElementById("tutoria").style.display = "block";
+			document.getElementById("TBL").style.display = "none";
 			document.getElementById("outras-disciplinas").style.display = "none";
 			break;
 		case 2:
 			document.getElementById("tutoria").style.display = "none";
+			document.getElementById("TBL").style.display = "block";
+			document.getElementById("outras-disciplinas").style.display = "none";
+			break;
+		case 3:
+			document.getElementById("tutoria").style.display = "none";
+			document.getElementById("TBL").style.display = "none";
 			document.getElementById("outras-disciplinas").style.display = "block";
 			break;
 		default:
@@ -32,6 +39,9 @@ function Calculate() {
 			CalculateTutoria();
 			break;
 		case 2:
+			CalculateTBL();
+			break;
+		case 3:
 			CalculateOthers();
 			break;
 		default:
@@ -53,6 +63,51 @@ function CalculateTutoria() {
 	var result = (media1 + media2) / 2;
 
 	showResult(media1, media2, result);
+}
+
+function SplitGrades(grades) {
+	console.log('Splitting numbers: ' + grades);
+	try {
+		var array = grades.split(';').map(n => parseFloat(n)).filter(n => !isNaN(n));
+		var sum = 0;
+		array.forEach(s => sum += s);
+		return sum / array.length;
+	} catch { 
+		return 'erro';
+	}
+}
+
+function UpdateMediaTGP(modulo) {
+	UpdateMedia('#TGPs' + modulo, '#mediaTGP' + modulo);
+}
+
+function UpdateMediaTCA(modulo) {
+	UpdateMedia('#TCAs' + modulo, '#mediaTCA' + modulo);
+}
+
+function UpdateMedia(gradesQuery, labelQuery) { 
+	var media = SplitGrades(document.querySelector(gradesQuery).value);
+	document.querySelector(labelQuery).innerHTML = media.toFixed(2);
+}
+
+function CalculateTBL() {
+	console.log('Calculating TBL');
+	var app1 = document.querySelector("#TBL #app1").value; 
+	var mediaTGP1 = parseFloat(document.querySelector("#TBL #mediaTGP1").innerHTML); 
+	var mediaTCA1 = parseFloat(document.querySelector("#TBL #mediaTCA1").innerHTML); 
+	var qst1 = document.querySelector("#TBL #qst1").value;
+	var media1 = (app1 * .1) + (mediaTGP1 * .1) + (mediaTCA1 * .3) + (qst1 * .5);
+	console.log(app1, mediaTGP1, mediaTCA1, qst1);
+	console.log('Media1: ' + media1);
+
+	var app2 = document.querySelector("#TBL #app2").value; 
+	var mediaTGP2 = parseFloat(document.querySelector("#TBL #mediaTGP2").innerHTML); 
+	var mediaTCA2 = parseFloat(document.querySelector("#TBL #mediaTCA2").innerHTML); 
+	var qst2 = document.querySelector("#TBL #qst2").value;
+	var media2 = (app2 * .1) + (mediaTGP2 * .1) + (mediaTCA2 * .3) + (qst2 * .5);
+	console.log('Media2: ' + media2);
+
+	showResult(media1, media2, (media1 + media2) / 2);
 }
 
 function CalculateOthers() {
