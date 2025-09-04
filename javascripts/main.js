@@ -92,19 +92,21 @@ function UpdateMedia(gradesQuery, labelQuery) {
 
 function CalculateTBL() {
 	console.log('Calculating TBL');
-	var app1 = document.querySelector("#TBL #app1").value; 
+	// var app1 = document.querySelector("#TBL #app1").value; 
 	var mediaTGP1 = parseFloat(document.querySelector("#TBL #mediaTGP1").innerHTML); 
 	var mediaTCA1 = parseFloat(document.querySelector("#TBL #mediaTCA1").innerHTML); 
 	var qst1 = document.querySelector("#TBL #qst1").value;
-	var media1 = (app1 * .1) + (mediaTGP1 * .1) + (mediaTCA1 * .3) + (qst1 * .5);
+	// var media1 = (app1 * .1) + (mediaTGP1 * .1) + (mediaTCA1 * .3) + (qst1 * .5);
+	var media1 = (mediaTGP1 * .15) + (mediaTCA1 * .35) + (qst1 * .5);
 	console.log(app1, mediaTGP1, mediaTCA1, qst1);
 	console.log('Media1: ' + media1);
 
-	var app2 = document.querySelector("#TBL #app2").value; 
+	// var app2 = document.querySelector("#TBL #app2").value; 
 	var mediaTGP2 = parseFloat(document.querySelector("#TBL #mediaTGP2").innerHTML); 
 	var mediaTCA2 = parseFloat(document.querySelector("#TBL #mediaTCA2").innerHTML); 
 	var qst2 = document.querySelector("#TBL #qst2").value;
-	var media2 = (app2 * .1) + (mediaTGP2 * .1) + (mediaTCA2 * .3) + (qst2 * .5);
+	// var media2 = (app2 * .1) + (mediaTGP2 * .1) + (mediaTCA2 * .3) + (qst2 * .5);
+	var media2 = (mediaTGP2 * .15) + (mediaTCA2 * .35) + (qst2 * .5);
 	console.log('Media2: ' + media2);
 
 	showResult(media1, media2, (media1 + media2) / 2);
