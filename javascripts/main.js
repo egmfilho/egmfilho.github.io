@@ -98,7 +98,6 @@ function CalculateTBL() {
 	var qst1 = document.querySelector("#TBL #qst1").value;
 	// var media1 = (app1 * .1) + (mediaTGP1 * .1) + (mediaTCA1 * .3) + (qst1 * .5);
 	var media1 = (mediaTGP1 * .15) + (mediaTCA1 * .35) + (qst1 * .5);
-	console.log(app1, mediaTGP1, mediaTCA1, qst1);
 	console.log('Media1: ' + media1);
 
 	// var app2 = document.querySelector("#TBL #app2").value; 
