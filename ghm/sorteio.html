@@ -38,9 +38,12 @@
 <script>
 
 	(function() {
+		let linhas = Math.min(prompt("Digite o número de linhas (máx. 15 linhas) "), 15);
+		let colunas = Math.min(prompt("Digite o número de colunas (máx. 23)"), 23);
+
 		const letters = [ '', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'W', 'X', 'Y', 'Z'];
-		const rows = 12;
-		const columns = 15;
+		const rows = linhas;
+		const columns = colunas;
 		
 		var table = document.getElementById("table");
 		var code = '';
